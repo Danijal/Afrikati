@@ -3,14 +3,20 @@
 	<head>
 		<title> test stranica </title>
 		<script type="text/javascript">
-
+			function nesto (){
+				var tekst = document.forma.taNepravilno.value;
+				tekst = tekst + " nadodani tekst"
+				document.forma.taPravilno.value = tekst;
+			}
 		</script>
 	</head>
-	<body background="images/background.jpg"> 
-		<form>
+
+	<body background="images/background.jpg">
+		<form name="forma">
+		  <h1 style="font-family:timesnewroman;" align="center">Ispravka afrikata</h1>
 		  <textarea style="height: 400px; width: 48%;" type="text" name="taNepravilno"></textarea>
 		  <textarea style="height: 400px; width: 48%;" type="text" readonly name="taPravilno"></textarea><br>
-		  <input type="submit" value="Replace">
+		  <input onclick="nesto()" type="button" value="Replace">
 		</form>
 	</body>
 </html>
